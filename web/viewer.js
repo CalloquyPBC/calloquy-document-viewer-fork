@@ -13,12 +13,12 @@
  * limitations under the License.
  */
 
-import "web-com";
-import "web-print_service";
-import { RenderingStates, ScrollMode, SpreadMode } from "./ui_utils.js";
-import { AppOptions } from "./app_options.js";
-import { LinkTarget } from "./pdf_link_service.js";
-import { PDFViewerApplication } from "./app.js";
+import "./genericcom.js";
+import "./pdf_print_service.js";
+import {RenderingStates, ScrollMode, SpreadMode} from "./ui_utils.js";
+import {AppOptions} from "./app_options.js";
+import {LinkTarget} from "./pdf_link_service.js";
+import {PDFViewerApplication} from "./app.js";
 
 /* eslint-disable-next-line no-unused-vars */
 const pdfjsVersion =
@@ -27,10 +27,7 @@ const pdfjsVersion =
 const pdfjsBuild =
   typeof PDFJSDev !== "undefined" ? PDFJSDev.eval("BUNDLE_BUILD") : void 0;
 
-const AppConstants =
-  typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")
-    ? { LinkTarget, RenderingStates, ScrollMode, SpreadMode }
-    : null;
+const AppConstants = {LinkTarget, RenderingStates, ScrollMode, SpreadMode};
 
 window.PDFViewerApplication = PDFViewerApplication;
 window.PDFViewerApplicationConstants = AppConstants;
@@ -52,10 +49,7 @@ function getViewerConfiguration() {
       zoomIn: document.getElementById("zoomIn"),
       zoomOut: document.getElementById("zoomOut"),
       viewFind: document.getElementById("viewFind"),
-      openFile:
-        typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")
-          ? document.getElementById("openFile")
-          : null,
+      openFile: document.getElementById("openFile"),
       print: document.getElementById("print"),
       editorFreeTextButton: document.getElementById("editorFreeText"),
       editorFreeTextParamsToolbar: document.getElementById(
@@ -69,10 +63,7 @@ function getViewerConfiguration() {
       toolbar: document.getElementById("secondaryToolbar"),
       toggleButton: document.getElementById("secondaryToolbarToggle"),
       presentationModeButton: document.getElementById("presentationMode"),
-      openFileButton:
-        typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")
-          ? document.getElementById("secondaryOpenFile")
-          : null,
+      openFileButton: document.getElementById("secondaryOpenFile"),
       printButton: document.getElementById("secondaryPrint"),
       downloadButton: document.getElementById("secondaryDownload"),
       viewBookmarkButton: document.getElementById("viewBookmark"),
@@ -164,10 +155,7 @@ function getViewerConfiguration() {
       editorInkOpacity: document.getElementById("editorInkOpacity"),
     },
     printContainer: document.getElementById("printContainer"),
-    openFileInput:
-      typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")
-        ? document.getElementById("fileInput")
-        : null,
+    openFileInput: document.getElementById("fileInput"),
     debuggerScriptPath: "./debugger.js",
   };
 }
@@ -215,4 +203,5 @@ export {
   PDFViewerApplication,
   AppConstants as PDFViewerApplicationConstants,
   AppOptions as PDFViewerApplicationOptions,
+  webViewerLoad
 };

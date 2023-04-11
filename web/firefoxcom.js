@@ -15,7 +15,7 @@
 
 import "../extensions/firefox/tools/l10n.js";
 import { DefaultExternalServices, PDFViewerApplication } from "./app.js";
-import { isPdfFile, PDFDataRangeTransport, shadow } from "pdfjs-lib";
+import { isPdfFile, PDFDataRangeTransport, shadow } from "../src/pdf";
 import { BasePreferences } from "./preferences.js";
 import { DEFAULT_SCALE_VALUE } from "./ui_utils.js";
 import { getL10nFallback } from "./l10n_utils.js";

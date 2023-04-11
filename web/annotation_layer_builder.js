@@ -22,7 +22,7 @@
 // eslint-disable-next-line max-len
 /** @typedef {import("./textaccessibility.js").TextAccessibilityManager} TextAccessibilityManager */
 
-import { AnnotationLayer } from "pdfjs-lib";
+import { AnnotationLayer } from "../src/pdf";
 import { NullL10n } from "./l10n_utils.js";
 import { PresentationModeState } from "./ui_utils.js";
 

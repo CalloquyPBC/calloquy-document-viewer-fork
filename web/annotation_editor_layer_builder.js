@@ -22,7 +22,7 @@
 /** @typedef {import("./text_accessibility.js").TextAccessibilityManager} TextAccessibilityManager */
 /** @typedef {import("./interfaces").IL10n} IL10n */
 
-import { AnnotationEditorLayer } from "pdfjs-lib";
+import { AnnotationEditorLayer } from "../src/pdf";
 import { NullL10n } from "./l10n_utils.js";
 
 /**

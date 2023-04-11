@@ -16,7 +16,7 @@
 /** @typedef {import("./event_utils").EventBus} EventBus */
 
 import { apiPageLayoutToViewerModes, RenderingStates } from "./ui_utils.js";
-import { createPromiseCapability, shadow } from "pdfjs-lib";
+import { createPromiseCapability, shadow } from "../src/pdf";
 
 /**
  * @typedef {Object} PDFScriptingManagerOptions

@@ -52,31 +52,31 @@ import {
   shadow,
   UnexpectedResponseException,
   version,
-} from "pdfjs-lib";
-import { AppOptions, OptionKind } from "./app_options.js";
-import { AutomationEventBus, EventBus } from "./event_utils.js";
-import { LinkTarget, PDFLinkService } from "./pdf_link_service.js";
-import { AnnotationEditorParams } from "web-annotation_editor_params";
-import { OverlayManager } from "./overlay_manager.js";
-import { PasswordPrompt } from "./password_prompt.js";
-import { PDFAttachmentViewer } from "web-pdf_attachment_viewer";
-import { PDFCursorTools } from "web-pdf_cursor_tools";
-import { PDFDocumentProperties } from "web-pdf_document_properties";
-import { PDFFindBar } from "web-pdf_find_bar";
-import { PDFFindController } from "./pdf_find_controller.js";
-import { PDFHistory } from "./pdf_history.js";
-import { PDFLayerViewer } from "web-pdf_layer_viewer";
-import { PDFOutlineViewer } from "web-pdf_outline_viewer";
-import { PDFPresentationMode } from "web-pdf_presentation_mode";
-import { PDFRenderingQueue } from "./pdf_rendering_queue.js";
-import { PDFScriptingManager } from "./pdf_scripting_manager.js";
-import { PDFSidebar } from "web-pdf_sidebar";
-import { PDFSidebarResizer } from "web-pdf_sidebar_resizer";
-import { PDFThumbnailViewer } from "web-pdf_thumbnail_viewer";
-import { PDFViewer } from "./pdf_viewer.js";
-import { SecondaryToolbar } from "web-secondary_toolbar";
-import { Toolbar } from "web-toolbar";
-import { ViewHistory } from "./view_history.js";
+} from "../src/pdf";
+import {AppOptions, OptionKind} from "./app_options.js";
+import {AutomationEventBus, EventBus} from "./event_utils.js";
+import {LinkTarget, PDFLinkService} from "./pdf_link_service.js";
+import {AnnotationEditorParams} from "./annotation_editor_params";
+import {OverlayManager} from "./overlay_manager.js";
+import {PasswordPrompt} from "./password_prompt.js";
+import {PDFAttachmentViewer} from "./pdf_attachment_viewer.js";
+import {PDFCursorTools} from "./pdf_cursor_tools";
+import {PDFDocumentProperties} from "./pdf_document_properties";
+import {PDFFindBar} from "./pdf_find_bar";
+import {PDFFindController} from "./pdf_find_controller.js";
+import {PDFHistory} from "./pdf_history.js";
+import {PDFLayerViewer} from "./pdf_layer_viewer.js";
+import {PDFOutlineViewer} from "./pdf_outline_viewer";
+import {PDFPresentationMode} from "./pdf_presentation_mode";
+import {PDFRenderingQueue} from "./pdf_rendering_queue.js";
+import {PDFScriptingManager} from "./pdf_scripting_manager.js";
+import {PDFSidebar} from "./pdf_sidebar";
+import {PDFSidebarResizer} from "./pdf_sidebar_resizer";
+import {PDFThumbnailViewer} from "./pdf_thumbnail_viewer";
+import {PDFViewer} from "./pdf_viewer.js";
+import {SecondaryToolbar} from "./secondary_toolbar";
+import {Toolbar} from "./toolbar";
+import {ViewHistory} from "./view_history.js";
 
 const FORCE_PAGES_LOADED_TIMEOUT = 10000; // ms
 const WHEEL_ZOOM_DISABLED_TIMEOUT = 1000; // ms
@@ -390,10 +390,9 @@ const PDFViewerApplication = {
    */
   async _initializeL10n() {
     this.l10n = this.externalServices.createL10n(
-      typeof PDFJSDev === "undefined" || PDFJSDev.test("!PRODUCTION || GENERIC")
-        ? { locale: AppOptions.get("locale") }
-        : null
+      {locale: AppOptions.get("locale")}
     );
+
     const dir = await this.l10n.getDirection();
     document.getElementsByTagName("html")[0].dir = dir;
   },

@@ -402,6 +402,7 @@ function _isValidProtocol(url) {
     case "ftp:":
     case "mailto:":
     case "tel:":
+    case "blob:":
       return true;
     default:
       return false;

@@ -19,7 +19,7 @@ import {
   Util,
 } from "../../shared/util.js";
 import { AnnotationEditor } from "./editor.js";
-import { fitCurve } from "pdfjs-fitCurve";
+import { fitCurve } from "./fit_curve.js";
 import { opacityToHex } from "./tools.js";
 
 // The dimensions of the resizer is 15x15:

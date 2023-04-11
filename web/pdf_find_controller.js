@@ -18,7 +18,7 @@
 /** @typedef {import("./interfaces").IPDFLinkService} IPDFLinkService */
 
 import { binarySearchFirstItem, scrollIntoView } from "./ui_utils.js";
-import { createPromiseCapability } from "pdfjs-lib";
+import { createPromiseCapability } from "../src/pdf";
 import { getCharacterType } from "./pdf_find_utils.js";
 
 const FindState = {

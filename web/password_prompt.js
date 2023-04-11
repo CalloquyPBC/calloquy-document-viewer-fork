@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { createPromiseCapability, PasswordResponses } from "pdfjs-lib";
+import { createPromiseCapability, PasswordResponses } from "../src/pdf";
 
 /**
  * @typedef {Object} PasswordPromptOptions

@@ -2,10 +2,14 @@
   "name": "pdf.js",
   "devDependencies": {
     "@babel/core": "^7.21.3",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-transform-modules-commonjs": "^7.21.2",
     "@babel/preset-env": "^7.20.2",
     "@babel/runtime": "^7.21.0",
     "@javascript-obfuscator/escodegen": "2.3.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
     "acorn": "^8.8.2",
     "autoprefixer": "^10.4.14",
     "babel-loader": "^9.1.2",
@@ -34,6 +38,8 @@
     "gulp-replace": "^1.1.4",
     "gulp-zip": "^5.1.0",
     "jasmine": "^4.6.0",
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
     "jsdoc": "^4.0.2",
     "jstransformer-markdown-it": "^3.0.0",
     "merge-stream": "^2.0.0",
@@ -63,8 +69,23 @@
     "wintersmith": "^2.5.0",
     "yargs": "^17.7.1"
   },
+  "dependencies": {
+    "@stencil/core": "^3.0.0"
+  },
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
   "scripts": {
-    "postinstall": "cross-env PUPPETEER_PRODUCT=firefox node node_modules/puppeteer/install.js"
+    "postinstall": "cross-env PUPPETEER_PRODUCT=firefox node node_modules/puppeteer/install.js",
+    "stencil:build": "stencil build --docs",
+    "stencil:start": "stencil build --dev --watch --serve",
+    "stencil:test": "stencil test --spec --e2e",
+    "stencil:test.watch": "stencil test --spec --e2e --watchAll",
+    "stencil:generate": "stencil generate"
   },
   "repository": {
     "type": "git",

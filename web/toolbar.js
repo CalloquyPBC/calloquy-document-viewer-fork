@@ -21,7 +21,7 @@ import {
   MIN_SCALE,
   noContextMenuHandler,
 } from "./ui_utils.js";
-import { AnnotationEditorType } from "pdfjs-lib";
+import { AnnotationEditorType } from "../src/pdf";
 
 const PAGE_NUMBER_LOADING_INDICATOR = "visiblePageIsLoading";
 

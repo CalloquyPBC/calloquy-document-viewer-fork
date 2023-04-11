@@ -13,8 +13,8 @@
  * limitations under the License.
  */
 
-const fitCurve = require(PDFJSDev.test("LIB")
-  ? "fit-curve"
-  : "fit-curve/src/fit-curve.js");
-
+// const fitCurve = require(PDFJSDev.test("LIB")
+//   ? "fit-curve"
+//   : "fit-curve/src/fit-curve.js");
+import * as fitCurve from "fit-curve";
 export { fitCurve };

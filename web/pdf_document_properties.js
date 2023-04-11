@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import { createPromiseCapability, PDFDateString } from "pdfjs-lib";
+import { createPromiseCapability, PDFDateString } from "../src/pdf";
 import { getPageSizeInches, isPortraitOrientation } from "./ui_utils.js";
 
 const DEFAULT_FIELD_CONTENT = "-";

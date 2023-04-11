@@ -32,7 +32,7 @@ import {
   PermissionFlag,
   PixelsPerInch,
   version,
-} from "pdfjs-lib";
+} from "../src/pdf";
 import {
   DEFAULT_SCALE,
   DEFAULT_SCALE_DELTA,

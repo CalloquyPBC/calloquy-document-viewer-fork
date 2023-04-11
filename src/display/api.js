@@ -2318,7 +2318,7 @@ class PDFWorker {
         return mainWorkerMessageHandler;
       }
       if (typeof PDFJSDev === "undefined" || !PDFJSDev.test("PRODUCTION")) {
-        const worker = await import("pdfjs/pdf.worker.js");
+        const worker = await import("../pdf.worker.js");//TODO: Add the worker as a asset
         return worker.WorkerMessageHandler;
       }
       if (

@@ -14,7 +14,7 @@
  */
 
 import { CursorTool, PresentationModeState } from "./ui_utils.js";
-import { AnnotationEditorType } from "pdfjs-lib";
+import { AnnotationEditorType } from "../src/pdf";
 import { GrabToPan } from "./grab_to_pan.js";
 
 /**
