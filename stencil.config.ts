@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 import babel from '@rollup/plugin-babel';
 
+
 export const config: Config = {
     namespace: 'calloquy-document-viewer',
     outputTargets: [
@@ -10,13 +11,6 @@ export const config: Config = {
         },
         {
             type: 'dist-custom-elements',
-            // copy: [
-            //     {
-            //         src: './src/pdf',
-            //         dest: 'dist/components/assets',
-            //         warn: true,
-            //     }
-            // ]
         },
         {
             type: 'docs-readme',
@@ -34,5 +28,7 @@ export const config: Config = {
                 plugins: ['@babel/plugin-proposal-class-properties']
             })
         ]
+
     }
+
 };
