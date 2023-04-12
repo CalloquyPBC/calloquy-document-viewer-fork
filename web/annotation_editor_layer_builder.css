@@ -19,19 +19,15 @@
   --freetext-line-height: 1.35;
   --freetext-padding: 2px;
   --editorFreeText-editing-cursor: text;
-  /*#if COMPONENTS*/
-  --editorInk-editing-cursor: pointer;
-  /*#else*/
-  --editorInk-editing-cursor: url(images/cursor-editorInk.svg) 0 16, pointer;
-  /*#endif*/
+
+  --editorInk-editing-cursor-icon: url(images/cursor-editorInk.svg);
+  --editorInk-editing-cursor: var(--editorInk-editing-cursor-icon) 0 16, pointer;
 }
 
 @media (min-resolution: 1.1dppx) {
   :root {
-    /*#if !COMPONENTS*/
-    --editorFreeText-editing-cursor: url(images/cursor-editorFreeText.svg) 0 16,
-      text;
-    /*#endif*/
+    --editorFreeText-editing-cursor-icon: url(images/cursor-editorFreeText.svg);
+    --editorFreeText-editing-cursor: var(--editorFreeText-editing-cursor-icon) 0 16, text;
   }
 }
 

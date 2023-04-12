@@ -133,9 +133,10 @@ function setCssAssetVariable(root: HTMLElement, name: string, path) {
 }
 
 export function setAssetsCssVariables() {
-  const root = document.querySelector<HTMLElement>(':root');
+  const root = document.querySelector<HTMLElement>(":root");
   // PDFViewerApplication.run({});
   setCssAssetVariable(root, "--loading-icon", "assets/loading.svg");
+  setCssAssetVariable(root, "--annimated-loading-icon", "assets/loading-icon.gif");
   setCssAssetVariable(root, "--treeitem-expanded-icon", "assets/treeitem-expanded.svg");
   setCssAssetVariable(root, "--treeitem-collapsed-icon", "assets/treeitem-collapsed.svg");
   setCssAssetVariable(root, "--toolbarButton-editorFreeText-icon", "assets/toolbarButton-editorFreeText.svg");
@@ -174,4 +175,6 @@ export function setAssetsCssVariables() {
   setCssAssetVariable(root, "--secondaryToolbarButton-spreadOdd-icon", "assets/secondaryToolbarButton-spreadOdd.svg");
   setCssAssetVariable(root, "--secondaryToolbarButton-spreadEven-icon", "assets/secondaryToolbarButton-spreadEven.svg");
   setCssAssetVariable(root, "--secondaryToolbarButton-documentProperties-icon", "assets/secondaryToolbarButton-documentProperties.svg");
+  setCssAssetVariable(root, "--editorInk-editing-cursor-icon", "assets/cursor-editorInk.svg");
+  setCssAssetVariable(root, "--editorFreeText-editing-cursor-icon", "assets/cursor-editorFreeText.svg");
 }
