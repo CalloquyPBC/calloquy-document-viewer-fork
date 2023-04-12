@@ -813,6 +813,7 @@ body {
   top: 6px;
   inset-inline-end: 6px;
   pointer-events: none;
+  -webkit-mask-image: var(--toolbarButton-menuArrow-icon);
   mask-image: var(--toolbarButton-menuArrow-icon);
 }
 
@@ -886,65 +887,79 @@ body {
 }
 
 #sidebarToggle::before {
+  -webkit-mask-image: var(--toolbarButton-sidebarToggle-icon);
   mask-image: var(--toolbarButton-sidebarToggle-icon);
   transform: scaleX(var(--dir-factor));
 }
 
 #secondaryToolbarToggle::before {
+  -webkit-mask-image: var(--toolbarButton-secondaryToolbarToggle-icon);
   mask-image: var(--toolbarButton-secondaryToolbarToggle-icon);
   transform: scaleX(var(--dir-factor));
 }
 
 #findPrevious::before {
+  -webkit-mask-image: var(--findbarButton-previous-icon);
   mask-image: var(--findbarButton-previous-icon);
 }
 
 #findNext::before {
+  -webkit-mask-image: var(--findbarButton-next-icon);
   mask-image: var(--findbarButton-next-icon);
 }
 
 #previous::before {
+  -webkit-mask-image: var(--toolbarButton-pageUp-icon);
   mask-image: var(--toolbarButton-pageUp-icon);
 }
 
 #next::before {
+  -webkit-mask-image: var(--toolbarButton-pageDown-icon);
   mask-image: var(--toolbarButton-pageDown-icon);
 }
 
 #zoomOut::before {
+  -webkit-mask-image: var(--toolbarButton-zoomOut-icon);
   mask-image: var(--toolbarButton-zoomOut-icon);
 }
 
 #zoomIn::before {
+  -webkit-mask-image: var(--toolbarButton-zoomIn-icon);
   mask-image: var(--toolbarButton-zoomIn-icon);
 }
 
 #presentationMode::before {
+  -webkit-mask-image: var(--toolbarButton-presentationMode-icon);
   mask-image: var(--toolbarButton-presentationMode-icon);
 }
 
 #editorFreeText::before {
+  -webkit-mask-image: var(--toolbarButton-editorFreeText-icon);
   mask-image: var(--toolbarButton-editorFreeText-icon);
 }
 
 #editorInk::before {
+  -webkit-mask-image: var(--toolbarButton-editorInk-icon);
   mask-image: var(--toolbarButton-editorInk-icon);
 }
 
 #print::before,
 #secondaryPrint::before {
+  -webkit-mask-image: var(--toolbarButton-print-icon);
   mask-image: var(--toolbarButton-print-icon);
 }
 
 /*#if GENERIC*/
 #openFile::before,
 #secondaryOpenFile::before {
+  -webkit-mask-image: var(--toolbarButton-openFile-icon);
   mask-image: var(--toolbarButton-openFile-icon);
 }
 /*#endif*/
 
 #download::before,
 #secondaryDownload::before {
+  -webkit-mask-image: var(--toolbarButton-download-icon);
   mask-image: var(--toolbarButton-download-icon);
 }
 
@@ -959,32 +974,39 @@ a.secondaryToolbarButton[href="#"] {
 }
 
 #viewBookmark::before {
+  -webkit-mask-image: var(--toolbarButton-bookmark-icon);
   mask-image: var(--toolbarButton-bookmark-icon);
 }
 
 #viewThumbnail::before {
+  -webkit-mask-image: var(--toolbarButton-viewThumbnail-icon);
   mask-image: var(--toolbarButton-viewThumbnail-icon);
 }
 
 #viewOutline::before {
+  -webkit-mask-image: var(--toolbarButton-viewOutline-icon);
   mask-image: var(--toolbarButton-viewOutline-icon);
   transform: scaleX(var(--dir-factor));
 }
 
 #viewAttachments::before {
+  -webkit-mask-image: var(--toolbarButton-viewAttachments-icon);
   mask-image: var(--toolbarButton-viewAttachments-icon);
 }
 
 #viewLayers::before {
+  -webkit-mask-image: var(--toolbarButton-viewLayers-icon);
   mask-image: var(--toolbarButton-viewLayers-icon);
 }
 
 #currentOutlineItem::before {
+  -webkit-mask-image: var(--toolbarButton-currentOutlineItem-icon);
   mask-image: var(--toolbarButton-currentOutlineItem-icon);
   transform: scaleX(var(--dir-factor));
 }
 
 #viewFind::before {
+  -webkit-mask-image: var(--toolbarButton-search-icon);
   mask-image: var(--toolbarButton-search-icon);
 }
 
@@ -1021,58 +1043,72 @@ a.secondaryToolbarButton[href="#"] {
 }
 
 #firstPage::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-firstPage-icon);
   mask-image: var(--secondaryToolbarButton-firstPage-icon);
 }
 
 #lastPage::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-lastPage-icon);
   mask-image: var(--secondaryToolbarButton-lastPage-icon);
 }
 
 #pageRotateCcw::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-rotateCcw-icon);
   mask-image: var(--secondaryToolbarButton-rotateCcw-icon);
 }
 
 #pageRotateCw::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-rotateCw-icon);
   mask-image: var(--secondaryToolbarButton-rotateCw-icon);
 }
 
 #cursorSelectTool::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-selectTool-icon);
   mask-image: var(--secondaryToolbarButton-selectTool-icon);
 }
 
 #cursorHandTool::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-handTool-icon);
   mask-image: var(--secondaryToolbarButton-handTool-icon);
 }
 
 #scrollPage::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-scrollPage-icon);
   mask-image: var(--secondaryToolbarButton-scrollPage-icon);
 }
 
 #scrollVertical::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-scrollVertical-icon);
   mask-image: var(--secondaryToolbarButton-scrollVertical-icon);
 }
 
 #scrollHorizontal::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-scrollHorizontal-icon);
   mask-image: var(--secondaryToolbarButton-scrollHorizontal-icon);
 }
 
 #scrollWrapped::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-scrollWrapped-icon);
   mask-image: var(--secondaryToolbarButton-scrollWrapped-icon);
 }
 
 #spreadNone::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-spreadNone-icon);
   mask-image: var(--secondaryToolbarButton-spreadNone-icon);
 }
 
 #spreadOdd::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-spreadOdd-icon);
   mask-image: var(--secondaryToolbarButton-spreadOdd-icon);
 }
 
 #spreadEven::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-spreadEven-icon);
   mask-image: var(--secondaryToolbarButton-spreadEven-icon);
 }
 
 #documentProperties::before {
+  -webkit-mask-image: var(--secondaryToolbarButton-documentProperties-icon);
   mask-image: var(--secondaryToolbarButton-documentProperties-icon);
 }
 
@@ -1274,9 +1310,11 @@ a:focus > .thumbnail > .thumbnailSelectionRing,
 }
 .treeItemToggler::before {
   inset-inline-end: 4px;
+  -webkit-mask-image: var(--treeitem-expanded-icon);
   mask-image: var(--treeitem-expanded-icon);
 }
 .treeItemToggler.treeItemsHidden::before {
+  -webkit-mask-image: var(--treeitem-collapsed-icon);
   mask-image: var(--treeitem-collapsed-icon);
   transform: scaleX(var(--dir-factor));
 }
