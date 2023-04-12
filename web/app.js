@@ -393,8 +393,8 @@ const PDFViewerApplication = {
       {locale: AppOptions.get("locale")}
     );
 
-    const dir = await this.l10n.getDirection();
-    document.getElementsByTagName("html")[0].dir = dir;
+    // const dir = await this.l10n.getDirection();
+    // document.getElementsByTagName("html")[0].dir = dir;
   },
 
   /**
