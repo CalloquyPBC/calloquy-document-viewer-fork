@@ -661,8 +661,8 @@ const PDFViewerApplication = {
     }
   },
 
-  run(config) {
-    this.initialize(config).then(webViewerInitialized);
+  run(config, file = 'compressed.tracemonkey-pldi-09.pdf') {
+    this.initialize(config).then(()=> webViewerInitialized(file));
   },
 
   get initialized() {
@@ -2117,6 +2117,7 @@ if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     "null",
     "http://mozilla.github.io",
     "https://mozilla.github.io",
+    "http://localhost:3333"
   ];
   // eslint-disable-next-line no-var
   var validateFileURL = function (file) {
@@ -2175,13 +2176,12 @@ function reportPageStatsPDFBug({ pageNumber }) {
   globalThis.Stats.add(pageNumber, pageView?.pdfPage?.stats);
 }
 
-function webViewerInitialized() {
+function webViewerInitialized(file) {
   const { appConfig, eventBus, l10n } = PDFViewerApplication;
-  let file;
   if (typeof PDFJSDev === "undefined" || PDFJSDev.test("GENERIC")) {
     const queryString = document.location.search.substring(1);
     const params = parseQueryString(queryString);
-    file = params.get("file") ?? AppOptions.get("defaultUrl");
+    file = file ?? params.get("file") ?? AppOptions.get("defaultUrl");
     validateFileURL(file);
   } else if (PDFJSDev.test("MOZCENTRAL")) {
     file = window.location.href;
