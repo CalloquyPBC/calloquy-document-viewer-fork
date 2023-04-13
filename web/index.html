@@ -8,9 +8,16 @@
 
   <script type="module" src="/build/calloquy-document-viewer.esm.js"></script>
   <script nomodule src="/build/calloquy-document-viewer.js"></script>
+  <style>
+    html,
+    body {
+      height: 100%;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
-<calloquy-document-viewer
+<calloquy-document-viewer style="display: block; height: 100%; width: 100%"
   file="https://mozilla.github.io/pdf.js/web/compressed.tracemonkey-pldi-09.pdf">
 </calloquy-document-viewer>
 </body>

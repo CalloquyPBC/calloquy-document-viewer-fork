@@ -211,13 +211,7 @@
   margin: 0;
 }
 
-html,
-body {
-  height: 100%;
-  width: 100%;
-}
-
-body {
+calloquy-document-viewer {
   background-color: var(--body-bg-color);
   scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg-color);
 }
