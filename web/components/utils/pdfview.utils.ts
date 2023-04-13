@@ -1,4 +1,3 @@
-import { getAssetPath } from "@stencil/core";
 
 export function getPDFViewerConfiguration() {
   return {
@@ -125,56 +124,4 @@ export function getPDFViewerConfiguration() {
     openFileInput: document.getElementById("fileInput"),
     debuggerScriptPath: "./debugger.js"
   };
-}
-
-function setCssAssetVariable(root: HTMLElement, name: string, path) {
-  const fullPath = getAssetPath(path);
-  root.style.setProperty(name, `url('${fullPath}')`);
-}
-
-export function setAssetsCssVariables() {
-  const root = document.querySelector<HTMLElement>(":root");
-  // PDFViewerApplication.run({});
-  setCssAssetVariable(root, "--loading-icon", "assets/loading.svg");
-  setCssAssetVariable(root, "--annimated-loading-icon", "assets/loading-icon.gif");
-  setCssAssetVariable(root, "--treeitem-expanded-icon", "assets/treeitem-expanded.svg");
-  setCssAssetVariable(root, "--treeitem-collapsed-icon", "assets/treeitem-collapsed.svg");
-  setCssAssetVariable(root, "--toolbarButton-editorFreeText-icon", "assets/toolbarButton-editorFreeText.svg");
-  setCssAssetVariable(root, "--toolbarButton-editorInk-icon", "assets/toolbarButton-editorInk.svg");
-  setCssAssetVariable(root, "--toolbarButton-menuArrow-icon", "assets/toolbarButton-menuArrow.svg");
-  setCssAssetVariable(root, "--toolbarButton-sidebarToggle-icon", "assets/toolbarButton-sidebarToggle.svg");
-  setCssAssetVariable(root, "--toolbarButton-secondaryToolbarToggle-icon", "assets/toolbarButton-secondaryToolbarToggle.svg");
-  setCssAssetVariable(root, "--toolbarButton-pageUp-icon", "assets/toolbarButton-pageUp.svg");
-  setCssAssetVariable(root, "--toolbarButton-pageDown-icon", "assets/toolbarButton-pageDown.svg");
-  setCssAssetVariable(root, "--toolbarButton-zoomOut-icon", "assets/toolbarButton-zoomOut.svg");
-  setCssAssetVariable(root, "--toolbarButton-zoomIn-icon", "assets/toolbarButton-zoomIn.svg");
-  setCssAssetVariable(root, "--toolbarButton-presentationMode-icon", "assets/toolbarButton-presentationMode.svg");
-  setCssAssetVariable(root, "--toolbarButton-print-icon", "assets/toolbarButton-print.svg");
-  setCssAssetVariable(root, "--toolbarButton-openFile-icon", "assets/toolbarButton-openFile.svg");
-  setCssAssetVariable(root, "--toolbarButton-download-icon", "assets/toolbarButton-download.svg");
-  setCssAssetVariable(root, "--toolbarButton-bookmark-icon", "assets/toolbarButton-bookmark.svg");
-  setCssAssetVariable(root, "--toolbarButton-viewThumbnail-icon", "assets/toolbarButton-viewThumbnail.svg");
-  setCssAssetVariable(root, "--toolbarButton-viewOutline-icon", "assets/toolbarButton-viewOutline.svg");
-  setCssAssetVariable(root, "--toolbarButton-viewAttachments-icon", "assets/toolbarButton-viewAttachments.svg");
-  setCssAssetVariable(root, "--toolbarButton-viewLayers-icon", "assets/toolbarButton-viewLayers.svg");
-  setCssAssetVariable(root, "--toolbarButton-currentOutlineItem-icon", "assets/toolbarButton-currentOutlineItem.svg");
-  setCssAssetVariable(root, "--toolbarButton-search-icon", "assets/toolbarButton-search.svg");
-  setCssAssetVariable(root, "--findbarButton-previous-icon", "assets/findbarButton-previous.svg");
-  setCssAssetVariable(root, "--findbarButton-next-icon", "assets/findbarButton-next.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-firstPage-icon", "assets/secondaryToolbarButton-firstPage.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-lastPage-icon", "assets/secondaryToolbarButton-lastPage.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-rotateCcw-icon", "assets/secondaryToolbarButton-rotateCcw.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-rotateCw-icon", "assets/secondaryToolbarButton-rotateCw.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-selectTool-icon", "assets/secondaryToolbarButton-selectTool.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-handTool-icon", "assets/secondaryToolbarButton-handTool.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-scrollPage-icon", "assets/secondaryToolbarButton-scrollPage.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-scrollVertical-icon", "assets/secondaryToolbarButton-scrollVertical.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-scrollHorizontal-icon", "assets/secondaryToolbarButton-scrollHorizontal.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-scrollWrapped-icon", "assets/secondaryToolbarButton-scrollWrapped.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-spreadNone-icon", "assets/secondaryToolbarButton-spreadNone.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-spreadOdd-icon", "assets/secondaryToolbarButton-spreadOdd.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-spreadEven-icon", "assets/secondaryToolbarButton-spreadEven.svg");
-  setCssAssetVariable(root, "--secondaryToolbarButton-documentProperties-icon", "assets/secondaryToolbarButton-documentProperties.svg");
-  setCssAssetVariable(root, "--editorInk-editing-cursor-icon", "assets/cursor-editorInk.svg");
-  setCssAssetVariable(root, "--editorFreeText-editing-cursor-icon", "assets/cursor-editorFreeText.svg");
 }

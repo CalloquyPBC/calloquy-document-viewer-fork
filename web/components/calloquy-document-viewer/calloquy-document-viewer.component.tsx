@@ -3,15 +3,15 @@ import { RenderingStates, ScrollMode, SpreadMode } from "../../ui_utils.js";
 import { AppOptions } from "../../app_options.js";
 import { LinkTarget } from "../../pdf_link_service.js";
 import { PDFViewerApplication } from "../../app.js";
-import { getPDFViewerConfiguration, setAssetsCssVariables } from "../utils/pdfview-utils";
+import { getPDFViewerConfiguration } from "../utils/pdfview.utils";
 import "../../genericcom.js";
 import "../../pdf_print_service.js";
+import { setAssetsCssVariables } from "../utils/icons.utils";
 
 @Component({
   tag: "calloquy-document-viewer",
   styleUrls: ["calloquy-document-viewer.css"],
   shadow: false,
-  assetsDirs: ["assets"]
 })
 export class CalloquyDocumentViewer {
   /**
