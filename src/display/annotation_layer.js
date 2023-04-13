@@ -18,6 +18,7 @@
 /** @typedef {import("./interfaces").IDownloadManager} IDownloadManager */
 /** @typedef {import("../../web/interfaces").IPDFLinkService} IPDFLinkService */
 
+import { annotations_icons } from "../../web/components/utils/icons.utils";
 import {
   AnnotationBorderStyleType,
   AnnotationType,
@@ -864,11 +865,14 @@ class TextAnnotationElement extends AnnotationElement {
     this.container.classList.add("textAnnotation");
 
     const image = document.createElement("img");
-    image.src =
-      this.imageResourcesPath +
-      "annotation-" +
-      this.data.name.toLowerCase() +
-      ".svg";
+    // image.src =
+    //   this.imageResourcesPath +
+    //   "annotation-" +
+    //   this.data.name.toLowerCase() +
+    //   ".svg";
+    // Use the annotation icons with Data URI
+    image.src = annotations_icons[this.data.name.toLowerCase()];
+
     image.alt = "[{{type}} Annotation]";
     image.dataset.l10nId = "text_annotation_type";
     image.dataset.l10nArgs = JSON.stringify({ type: this.data.name });
@@ -2524,9 +2528,14 @@ class FileAttachmentAnnotationElement extends AnnotationElement {
       //   least the following standard names: GraphPushPin, PaperclipTag.
       //   Additional names may be supported as well. Default value: PushPin.
       trigger = document.createElement("img");
-      trigger.src = `${this.imageResourcesPath}annotation-${
-        /paperclip/i.test(this.data.name) ? "paperclip" : "pushpin"
-      }.svg`;
+
+      // trigger.src = `${this.imageResourcesPath}annotation-${
+      //   /paperclip/i.test(this.data.name) ? "paperclip" : "pushpin"
+      // }.svg`;
+
+      // Use the annotation icons with Data URI
+      const annotationIconName = /paperclip/i.test(this.data.name) ? "paperclip" : "pushpin"
+      trigger.src = annotations_icons[annotationIconName];
     }
     trigger.classList.add("popupTriggerArea");
     trigger.addEventListener("dblclick", this._download.bind(this));
