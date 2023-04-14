@@ -2534,7 +2534,7 @@ class FileAttachmentAnnotationElement extends AnnotationElement {
       // }.svg`;
 
       // Use the annotation icons with Data URI
-      const annotationIconName = /paperclip/i.test(this.data.name) ? "paperclip" : "pushpin"
+      const annotationIconName = /paperclip/i.test(this.data.name) ? "paperclip" : "pushpin";
       trigger.src = annotations_icons[annotationIconName];
     }
     trigger.classList.add("popupTriggerArea");
