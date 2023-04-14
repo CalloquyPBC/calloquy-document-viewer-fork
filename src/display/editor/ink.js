@@ -436,7 +436,7 @@ class InkEditor extends AnnotationEditor {
     // to reduce the data size used to draw it in the PDF.
     let bezier;
     if (this.currentPath.length !== 1) {
-      bezier = fitCurve(this.currentPath, 30, null);
+      bezier = fitCurve(this.currentPath, 30);
     } else {
       // We have only one point finally.
       const xy = [x, y];

@@ -103,8 +103,7 @@ describe("editor", function () {
           [1, 2],
           [4, 5],
         ],
-        30,
-        null
+        30
       );
       expect(bezier).toEqual([
         [

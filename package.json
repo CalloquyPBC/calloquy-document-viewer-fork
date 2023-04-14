@@ -30,7 +30,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-sort-exports": "^0.8.0",
     "eslint-plugin-unicorn": "^46.0.0",
-    "fit-curve": "^0.2.0",
     "globals": "^13.20.0",
     "gulp": "^4.0.2",
     "gulp-postcss": "^9.0.1",
@@ -70,7 +69,8 @@
     "yargs": "^17.7.1"
   },
   "dependencies": {
-    "@stencil/core": "^3.0.0"
+    "@stencil/core": "^3.0.0",
+    "fit-curve": "^0.2.0"
   },
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",

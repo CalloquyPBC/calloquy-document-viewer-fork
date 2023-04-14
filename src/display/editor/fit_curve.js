@@ -16,5 +16,5 @@
 // const fitCurve = require(PDFJSDev.test("LIB")
 //   ? "fit-curve"
 //   : "fit-curve/src/fit-curve.js");
-import * as fitCurve from "fit-curve";
+import  fitCurve  from "fit-curve";
 export { fitCurve };
